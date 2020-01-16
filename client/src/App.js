@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
@@ -7,11 +6,11 @@ function App() {
 
   useEffect(() => {
     fetch("api/greeting?name=cool")
-      .then(res => {
-        res.json();
-      })
+      .then(res => res.json())
       .then(greeting => setGreeting(greeting))
-      .catch(err => {});
+      .catch(err => {
+        console.log(err);
+      });
   }, []);
   return (
     <div className="App">
