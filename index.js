@@ -18,7 +18,7 @@ app.get("/api/greeting", (req, res) => {
 });
 
 app.use((req, res) => {
-  res.send("This API is alive");
+  res.json("This API is alive");
 });
 
 app.listen(port, () => {
